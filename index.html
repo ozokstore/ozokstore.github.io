@@ -12,31 +12,39 @@
       text-align: center;
       background: #f9f9f9;
     }
+
+    /* EN ÜSTE SABİT KAYAN YAZI */
+    .kayan-yazi {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f5f5f5;
+      padding: 10px 0;
+      font-weight: bold;
+      font-family: sans-serif;
+      color: #333;
+      z-index: 9999;
+    }
+
     .container {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 400vh;
-      padding: 80px;
+      padding: 100px 80px 80px; /* ÜSTTEKİ KAYAN YAZI İÇİN BOŞLUK EKLENDİ */
     }
+
     img {
       max-width: 150px;
       height: auto;
       margin-bottom: 20px;
     }
+
     h1 {
       font-size: 24px;
       color: #333;
-    }
-
-    .kayan-yazi {
-      background-color: #f5f5f5;
-      padding: 10px;
-      font-weight: bold;
-      font-family: sans-serif;
-      color: #333;
-      margin-top: 20px;
     }
 
     @media (min-width: 768px) {
@@ -51,13 +59,17 @@
   </style>
 </head>
 <body>
+
+  <!-- EN ÜSTE SABİT KAYAN YAZI -->
+  <marquee class="kayan-yazi" behavior="scroll" direction="left">
+    🔧 Özokstore gelişiyor... Yakında yepyeni tasarım, hızlı alışveriş ve çok daha fazlası! Takipte kal 💡
+  </marquee>
+
+  <!-- ANA İÇERİK -->
   <div class="container">
     <img src="logo2.png" alt="Özok Store Logo">
     <h1>ÇOK YAKINDA HİZMETİNİZDEYİZ</h1>
   </div>
 
-  <marquee class="kayan-yazi" behavior="scroll" direction="left">
-    🔧 Özokstore gelişiyor... Yakında yepyeni tasarım, hızlı alışveriş ve çok daha fazlası! Takipte kal 💡
-  </marquee>
 </body>
 </html>
