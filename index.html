@@ -13,7 +13,7 @@
       background: #f9f9f9;
     }
 
-    /* EN ÜSTE SABİT KAYAN YAZI */
+    /* En üste sabit kayan yazı */
     .kayan-yazi {
       position: fixed;
       top: 0;
@@ -32,8 +32,9 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 400vh;
-      padding: 100px 80px 80px; /* ÜSTTEKİ KAYAN YAZI İÇİN BOŞLUK EKLENDİ */
+      min-height: 100vh; /* 400vh değildi, bunu 100vh yaptık */
+      padding: 100px 20px 40px; /* Üstteki kayan yazı için boşluk */
+      box-sizing: border-box;
     }
 
     img {
@@ -45,6 +46,7 @@
     h1 {
       font-size: 24px;
       color: #333;
+      margin: 0;
     }
 
     @media (min-width: 768px) {
@@ -52,6 +54,7 @@
         flex-direction: row;
         gap: 40px;
       }
+
       img {
         margin-bottom: 0;
       }
@@ -60,7 +63,7 @@
 </head>
 <body>
 
-  <!-- EN ÜSTE SABİT KAYAN YAZI -->
+  <!-- EN ÜSTTE SABİT KAYAN YAZI -->
   <marquee class="kayan-yazi" behavior="scroll" direction="left">
     🔧 Özokstore gelişiyor... Yakında yepyeni tasarım, hızlı alışveriş ve çok daha fazlası! Takipte kal 💡
   </marquee>
